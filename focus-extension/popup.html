@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus Extension</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="icon32.png">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    h1 { font-size: 1.2em; }
+    label, input, button { margin-top: 8px; display: block; }
+  </style>
+</head>
+<body>
+  <h1 style="color:#A2AF9B; font-family:'Segoe UI',sans-serif;">Focus Extension</h1>
+  <form id="addForm" style="background:#FAF9EE;padding:16px;border-radius:12px;box-shadow:0 2px 8px #A2AF9B22;">
+    <label for="site" style="color:#A2AF9B;">Website:</label>
+  <input type="text" id="site" required style="margin-bottom:8px;width:100%;padding:8px;border-radius:8px;border:1px solid #A2AF9B;background:#EEEEEE;color:#A2AF9B;font-size:16px;">
+    <label for="blockTime" style="color:#A2AF9B;">Block after:</label>
+  <input type="number" id="blockTime" min="1" value="60" required style="margin-bottom:8px;width:100px;padding:8px;border-radius:8px;border:1px solid #A2AF9B;background:#EEEEEE;color:#A2AF9B;font-size:16px;">
+  <select id="blockUnit" style="margin-bottom:8px;padding:8px;border-radius:8px;border:1px solid #A2AF9B;background:#EEEEEE;color:#A2AF9B;font-size:16px;">
+      <option value="seconds">Seconds</option>
+      <option value="minutes">Minutes</option>
+    </select>
+    <label for="unblockTime" style="color:#A2AF9B;">Unblock after:</label>
+  <input type="number" id="unblockTime" min="1" value="30" required style="margin-bottom:8px;width:100px;padding:8px;border-radius:8px;border:1px solid #A2AF9B;background:#EEEEEE;color:#A2AF9B;font-size:16px;">
+  <select id="unblockUnit" style="margin-bottom:8px;padding:8px;border-radius:8px;border:1px solid #A2AF9B;background:#EEEEEE;color:#A2AF9B;font-size:16px;">
+      <option value="seconds">Seconds</option>
+      <option value="minutes">Minutes</option>
+    </select>
+    <button type="submit" style="background:#A2AF9B;color:#FAF9EE;border:none;padding:8px 16px;border-radius:8px;">Add to Blacklist</button>
+  </form>
+  <div id="blacklist"></div>
+  <div id="status" style="margin-top:12px;color:#A2AF9B;"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
